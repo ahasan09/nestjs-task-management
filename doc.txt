@@ -1,0 +1,5 @@
+1. docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+2. docker container stop postgres-nest
+3. docker container start postgres-nest
+4. docker container rm postgres-nest
+5. npm run start:dev
