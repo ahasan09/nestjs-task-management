@@ -19,12 +19,12 @@ export class TasksService {
         const query = this.repository.createQueryBuilder('task');
 
         if (status) {
-            query.andWhere('task.status = :status', { status })
+            query.andWhere('status = :status', { status })
         }
 
         if (search) {
             query.andWhere(
-                '(LOWER(task.title) LIKE LOWER(:search) OR LOWER(task.description) LIKE LOWER(:search))',
+                '(LOWER(title) LIKE LOWER(:search) OR LOWER(description) LIKE LOWER(:search))',
                 { search: `%${search}%` })
         }
 
