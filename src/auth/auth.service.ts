@@ -26,7 +26,7 @@ export class AuthService {
         try {
             await this.repository.save(user);
         } catch (error) {
-            if (error.code === '23505') {
+            if ((error as { code?: string }).code === '23505') {
                 throw new ConflictException('Username already exists');
             } else {
                 throw new InternalServerErrorException()

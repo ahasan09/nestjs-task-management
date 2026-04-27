@@ -38,7 +38,7 @@ export class TasksService {
         } catch (error) {
             this.logger.error(
                 `Failed to get tasks for user "${user.username}". Filters: ${JSON.stringify(filterDto)}`,
-                error.stack
+                error instanceof Error ? error.stack : String(error)
             );
             throw new InternalServerErrorException();
         }
