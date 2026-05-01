@@ -1,0 +1,12 @@
+
+> nestjs-task-management@0.0.1 test
+> cross-env STAGE=dev jest
+
+No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /Users/abulhasan/Desktop/Programming/Github_Projects/nestjs-task-management/src
+  20 files checked.
+  testMatch:  - 0 matches
+  testPathIgnorePatterns: /node_modules/ - 20 matches
+  testRegex: .*\.spec\.ts$ - 0 matches
+Pattern:  - 0 matches

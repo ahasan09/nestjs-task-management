@@ -1,0 +1,27 @@
+
+> nestjs-task-management@0.0.1 test
+> cross-env STAGE=dev jest
+
+FAIL src/smoke.spec.ts
+  ● Test suite failed to run
+
+    [96msrc/smoke.spec.ts[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m TS2593: [0mCannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m1[0m describe('smoke', () => {
+    [7m [0m [91m~~~~~~~~[0m
+    [96msrc/smoke.spec.ts[0m:[93m2[0m:[93m3[0m - [91merror[0m[90m TS2593: [0mCannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+    [7m2[0m   it('runs basic assertions', () => {
+    [7m [0m [91m  ~~[0m
+    [96msrc/smoke.spec.ts[0m:[93m3[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'expect'.
+
+    [7m3[0m     expect(true).toBe(true);
+    [7m [0m [91m    ~~~~~~[0m
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.556 s
+Ran all test suites.
+(node:99782) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
