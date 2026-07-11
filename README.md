@@ -104,3 +104,17 @@ src/
 ├── config.schema.ts  # Env variable validation schema
 └── main.ts        # App bootstrap
 ```
+
+## Local PostgreSQL via Docker
+
+```bash
+# Start a local Postgres for development
+docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+
+# Stop / start / remove the container
+docker container stop postgres-nest
+docker container start postgres-nest
+docker container rm postgres-nest
+```
+
+Then configure your environment: copy `.env.example` to `.env.stage.dev`, fill in the values (never commit this file), and run `npm run start:dev`.
